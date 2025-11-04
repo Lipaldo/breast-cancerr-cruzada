@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classificador de Câncer de Mama — Rede Neural</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🧠 Classificador de Câncer de Mama</h1>
+    <p>Simulação visual de uma Rede Neural com TensorFlow (em Python) reimaginada em HTML, CSS e JS.</p>
+  </header>
+
+  <main>
+    <section id="info">
+      <h2>📋 Descrição</h2>
+      <p>
+        Este projeto representa uma rede neural artificial criada com TensorFlow e SciKeras para classificar
+        dados do conjunto <strong>Breast Cancer Wisconsin</strong>. O modelo usa duas camadas densas com Dropout
+        e é avaliado com <strong>validação cruzada (cross-validation)</strong> de 10 folds.
+      </p>
+    </section>
+
+    <section id="train-section">
+      <h2>⚙️ Simulação de Treinamento</h2>
+      <button id="trainButton">Iniciar Treinamento</button>
+      <div id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+      <p id="progressText">Aguardando início...</p>
+    </section>
+
+    <section id="results">
+      <h2>📈 Resultados da Validação Cruzada</h2>
+      <canvas id="accuracyChart"></canvas>
+      <div id="stats">
+        <p>Média de acurácia: <strong id="meanAcc">--</strong></p>
+        <p>Desvio padrão: <strong id="stdAcc">--</strong></p>
+      </div>
+    </section>
+
+    <section id="architecture">
+      <h2>🧩 Arquitetura da Rede Neural</h2>
+      <div class="network-diagram">
+        <div class="layer input">30 neurônios<br><span>Entrada</span></div>
+        <div class="layer hidden">16 neurônios<br><span>Oculta 1</span></div>
+        <div class="layer hidden">16 neurônios<br><span>Oculta 2</span></div>
+        <div class="layer output">1 neurônio<br><span>Saída</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por <strong>Felipe Maciel</strong> — Projeto de IA e Visão Computacional</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
